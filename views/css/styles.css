@@ -1,0 +1,58 @@
+body    { 
+	padding-top:50px;
+}
+
+*:focus{
+    outline: none;
+}
+
+.navbar-header{
+    height: 75px;
+    width: 90%;
+}
+.navbar-brand{
+    position: relative;
+    top: 2px;
+}
+
+.title{
+    color: #333333;
+    position: relative;
+    top: 0px;
+}
+
+.box{
+	margin-left: 25px;
+	margin-top: 30px;
+	border: 1px solid lightgrey;
+	border-radius: 15px;
+	height: 200px;
+	padding: 10px;
+	background: #fff;
+}
+
+.forecast-title{
+	font-size: 13px;
+	font-family: helvetica;
+	position: relative;
+}
+
+.forecast-item{
+	margin-top: 20px;
+}
+
+.forecast-degree{
+	font-family: helvetica;
+	font-size: 20px;
+	color: #ffe174;
+	background-color: grey;
+	padding: 5px;
+}
+
+.city-name{
+	padding: 0px 0px 0px 28px;
+}
+
+.item{
+	margin-bottom: 30px;
+}

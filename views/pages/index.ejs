@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <% include ../partials/head %>
+	</head>
+	<body class="container">
+
+		<header>
+		    <% include ../partials/header %>
+		</header>
+
+		<main>
+			<div class="row">
+			    <div class="col-sm-12">    
+			        <div class="jumbotron">
+						<div class="row">
+					    	<% items.forEach(function(item) { %>
+					    		<div class="item col-sm-12">
+						    		<div class="city-name">
+						    			<h2><%= item.city %></h2>
+						    		</div>
+						    		<div class="item-list">
+							    		<% item.forecast.forEach(function(day) { %>
+									    	<div class="box col-sm-2 text-center">
+									    		<span class="col-sm-12 forecast-item forecast-title">
+									    			<strong> <%= day.date %> </strong>
+									    		</span>
+									    		<span class="col-sm-12 forecast-item forecast-thumb">
+									    			<i class="fa fa-4x fa-cloud"></i>
+									    		</span>
+									    		<span class="col-sm-12 forecast-item forecast-degree">
+									    			<strong>
+									    				<span class="low"> <%= parseInt(day.low / 1.8) %> º C </span>&nbsp;/&nbsp;<span class="high"> <%= parseInt(day.high / 1.8) %> º C </span>
+									    			</strong>
+									    		</span>
+									    	</div>
+									    <% }); %>
+						    		</div>
+						    	</div>
+						    <% }); %>
+						    </div>
+						</div>
+			        </div>
+			    </div>
+			</div>
+		</main>
+
+		<footer>
+		    <% include ../partials/footer %>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</body>
+
+</html>
